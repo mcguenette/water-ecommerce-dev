@@ -110,6 +110,9 @@ nav ul li + li {
     color:var(--primary-red);
 }
 
+li.mobile-menu {
+    font-size: 14px;
+}
 /* ----------------- */
 .hero {
     position:relative;
@@ -320,5 +323,22 @@ footer nav {
     }
     h1 {
       font-size:24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+        font-size: 14px;
+    }
+    .nav-item {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+        font-size: 0px;
     }
 }
