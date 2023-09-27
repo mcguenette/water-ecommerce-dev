@@ -2,9 +2,8 @@
 @import url(./reset.css);
 
 :root {
-    --primary-bg-color: #121212;
+    --primary-bg-color: #060d1b;
     --secondary-bg-color: #1d2333;
-    --footer-bg-color: #212121;
     --body-font-color: #fff;
     --card-bg-color: #ccc;
     --primary-blue: #293c92;
@@ -140,8 +139,9 @@ li.mobile-menu {
     padding: 0;
 }
 
-  .inner-header.flex {
+.inner-header.flex {
     flex-direction: column;
+    height: 65vh;
 }
 
 .flex {
@@ -160,15 +160,15 @@ li.mobile-menu {
     max-height:150px;
 }
 
-.hero::after {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem;
-    transform: scale(0);
-    transition: all .3s ease-in-out;
-    backdrop-filter: blur(8px) brightness(80%);
+.hero-banner {
+    position: relative;
 }
+
+.hero-banner > * {
+    z-index: 10;
+    position: relative;
+}
+
   
 .content {
     position:relative;
@@ -180,27 +180,31 @@ li.mobile-menu {
   /* Wave Animation */
 
 .parallax > use {
-animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
 }
 
 .parallax > use:nth-child(1) {
-animation-delay: -2s;
-animation-duration: 7s;
+    animation-delay: -3s;
+    animation-duration: 7s;
+    fill: rgb(92 156 253 / 30%);
 }
 
 .parallax > use:nth-child(2) {
-animation-delay: -3s;
-animation-duration: 10s;
+    animation-delay: -4s;
+    animation-duration: 10s;
+    fill: rgb(92 156 253 / 50%);
 }
 
 .parallax > use:nth-child(3) {
-animation-delay: -4s;
-animation-duration: 13s;
+    animation-delay: -5s;
+    animation-duration: 13s;
+    fill: rgb(92 156 253 / 70%);
 }
 
 .parallax > use:nth-child(4) {
-animation-delay: -5s;
-animation-duration: 20s;
+    animation-delay: -5s;
+    animation-duration: 20s;
+    fill: var(--primary-bg-color);
 }
 @keyframes move-forever {
     0% {
@@ -282,7 +286,7 @@ section {
 }
 
 footer {
-    background-color: var(--footer-bg-color);
+    background-color: var(--primary-blue);
     position: relative;
     display: flex;
     height: 60px;
