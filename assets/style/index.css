@@ -50,7 +50,7 @@ header {
 }
 
 .header {
-    height: 80px;
+    height: 120px;
 }
 
 header nav {
@@ -99,7 +99,9 @@ nav ul li + li {
     text-decoration: none;
     font-size: 18px;
     transition: all 0.20s ease-in-out;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 19px;
 }
 
 .nav-items a {
@@ -132,7 +134,7 @@ li.mobile-menu {
 }
   
   .inner-header {
-    height:65vh;
+    height:35vh;
     width:100%;
     margin: 0;
     padding: 0;
@@ -208,12 +210,16 @@ li.mobile-menu {
     border: 1px solid #fff;
     background-color: #ffffff4d;
 }
-
+input.secondary-button:hover {
+    background-color: var(--secondary-bg-color);
+    border: 1px solid var(--secondary-bg-color);
+}
 input[type=button] {
     color: #fff;
     border-radius: 25px;
     padding: 7px 20px;
     margin: 20px 5px 0px 5px;
+    line-height: 24px;
 }
 
 input.primary-button:hover {
