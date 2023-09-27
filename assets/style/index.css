@@ -2,9 +2,10 @@
 @import url(./reset.css);
 
 :root {
-    --primary-bg-color: #060d1b;
+    --primary-bg-color: #0f1a31;
     --secondary-bg-color: #1d2333;
     --body-font-color: #fff;
+    --section-bg-color: rgb(41 60 146 / 30%);
     --card-bg-color: #ccc;
     --primary-blue: #293c92;
     --secondary-blue: #5c9cfd;
@@ -118,7 +119,7 @@ li.mobile-menu {
 .hero {
     position:relative;
     text-align:center;
-    background: linear-gradient(60deg, var(--primary-blue) 40%, var(--secondary-blue) 100%);
+    background: linear-gradient(60deg, var(--primary-blue) 9%, var(--secondary-blue) 100%);
     color:white;
     height: 100%;
     width: 100%;
@@ -258,7 +259,7 @@ input.primary-button:hover {
     gap: 25px;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-bg-color);
+    background-color: var(--section-bg-color);
     padding: 30px;
     border-radius: 10px;
 }
