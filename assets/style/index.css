@@ -329,7 +329,7 @@ input.primary-button:hover {
 /* -------Footer------ */
 
 footer {
-    background-color: var(--primary-blue);
+    background-color: var(--section-bg-color);
     position: relative;
     display: flex;
     height: 60px;
