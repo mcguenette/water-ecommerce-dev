@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+/* -------Basic-styles------ */
+
+:root {
+    --primary-bg-color: #0f1a31;
+    --secondary-bg-color: #1d2333;
+    --body-font-color: #fff;
+    --section-bg-color: rgb(41 60 146 / 30%);
+    --card-bg-color: #ccc;
+    --primary-blue: #293c92;
+    --secondary-blue: #5c9cfd;
+    --primary-red: #fb4501;
+    --linkedin-color: #0077b5;
+    --github-color:#2dba4e;
+    --tiktok-color:#ff0050;
+}
+
+.container {
+    width: min(100% - 30px, 1280px);
+    margin-inline: auto;
+}
+
+.container.main-container {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+main {
+    height: calc(100dvh - 80px - 60px);
+    display: inline;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    font-family: 'IBM Plex Sans', sans-serif;
+    color:var(--body-font-color);
+}
+
+html, body {
+    height: 100%;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #0077b5;
+    border-radius: 3px;
+    background-color: #0f1a31;
+}
+
+input[type=text]:focus {
+    border: 3px solid #fb4501;
+  }
