@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url(./reset.css);
+@import url(./index.css);
 
 /* -------Basic-styles------ */
 
@@ -194,14 +195,28 @@ li.mobile-menu {
     background-color: white;
 }
 
+.container.flex.contact-container {
+    gap: 40px;
+    width: 75%;
+}
+
 .flex .form {
     width: 50%;
     text-align: left;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .flex .map {
-    width: 50%;
+    width: 100%;
     text-align: right;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 input[type=text]{
@@ -255,7 +270,7 @@ div .map {
 }
 
 .circle-image img {
-    border-radius: 50%;
+    border-radius: 6px;
 }
 
 .circle-img {
@@ -264,6 +279,7 @@ div .map {
 
 .about-link {
     width: 70%;
+    text-align: left;
 }
 
 button {
