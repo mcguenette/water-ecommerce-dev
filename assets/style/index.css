@@ -42,7 +42,7 @@ main {
 
 body {
     background-color: var(--primary-bg-color);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color:var(--body-font-color);
 }
 
@@ -53,10 +53,10 @@ html, body {
 /* --------Header------- */
 
 .header {
-    height: 120px;
+    height: 100px;
 }
 
-header {
+header.header-index {
     background-color: transparent;
     overflow: hidden;
 
@@ -88,9 +88,15 @@ h3 {
     text-align: center;
 }
 
+.section-one p, h3 {
+    text-align: left;
+}
+
 p {
-    letter-spacing: 1.5px;
+    letter-spacing: 0.2px;
     line-height: 30px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .inner-header h2 {
@@ -126,6 +132,7 @@ nav ul li + li {
 
 .nav-items a {
     color: #fff;
+    font-family: 'Xeroda', sans-serif;
 }
 
 .nav-items a:hover {
@@ -143,14 +150,6 @@ li.mobile-menu {
     color:white;
     height: 100%;
     width: 100%;
-}
-
-.logo {
-    width:50px;
-    fill:white;
-    padding-right:15px;
-    display:inline-block;
-    vertical-align: middle;
 }
   
 .inner-header {
@@ -197,7 +196,18 @@ li.mobile-menu {
     background-color: white;
 }
 
+.flex .form {
+    width: 50%;
+    text-align: left;
+}
+
+.flex .map {
+    width: 50%;
+    text-align: right;
+}
+
 /* -------Waves animation------ */
+
 .parallax > use {
     animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
 }
@@ -273,6 +283,21 @@ section {
     gap: 20px;
 }
 
+.section-one.three-quarters {
+    width: 75%;
+    margin-inline: auto;
+    margin-top: 60px;
+}
+
+hr {
+    margin: 0 auto;
+    margin-top: 250px;
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--secondary-blue) , rgba(255, 255, 255, 0));
+}
+
 .column {
     flex: 0 1 auto;
     width: calc(25% - 15px);
@@ -314,7 +339,7 @@ input.secondary-button:hover {
     border: 1px solid var(--secondary-bg-color);
 }
 
-input[type=button] {
+input[type=button], input[type=submit] {
     color: #fff;
     border-radius: 25px;
     padding: 7px 20px;
@@ -324,6 +349,63 @@ input[type=button] {
 
 input.primary-button:hover {
     background-color: var(--primary-red);
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #0077b5;
+    border-radius: 3px;
+    background-color: #0f1a31;
+}
+
+input[type=text]:focus {
+    border: 3px solid #fb4501;
+}
+
+input[type=textarea] {
+    width: 100%;
+    padding: 12px;
+    background-color: #0f1a31;
+    border: 3px solid #0077b5;
+    border-radius: 3px;
+    /* resize: vertical; */
+}
+
+input[type=textarea]:focus {
+    border: 3px solid #fb4501;
+}
+
+/* ------About us-------- */
+
+
+/* ------Contact us------ */
+div .map {
+    width: 100%;
+    height: 250px;
+}
+
+.circle-image {
+    height: 250px;
+    width: 250px;
+}
+
+.circle-image img {
+    border-radius: 50%;
+}
+
+.circle-img {
+    width: 30%;
+}
+
+.about-link {
+    width: 70%;
+}
+
+.continue-link {
+    background-color: #122346;
 }
 
 /* -------Footer------ */
@@ -382,26 +464,39 @@ footer nav {
 }
 
 /* --------Hover header animation---------- */
-/* 
-.section1 {
-	position: relative;
+
+main .page-title {
+    position: relative;
+    display: flex;
+    height: 250px;
+    background: linear-gradient(60deg, var(--primary-blue) 9%, var(--secondary-blue) 100%);
+    justify-content: center;
+    align-items: center;
 }
 
-.section1 h2 {
+header.not-index {
+    background: linear-gradient(60deg, var(--primary-blue) 0%, var(--secondary-blue) 96%);
+}
+
+.page-title h2 {
 	color: #fff;
+	font-size: 4em;
+	position: absolute;
 	transform: translate(-50%, -50%);
-    transition: all 0.20s ease-in-out;
-    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-family: 'Poppins', sans-serif;
 }
 
-.section1 h2:nth-child(1):hover {
-    color: var(--primary-red);
-}
-
-.section1 h2:nth-child(2):hover {
+.page-title h2:nth-child(1) {
+    -webkit-text-stroke: 2px;
     color: #fff;
+}
+
+.page-title h2:nth-child(2) {
+    color: var(--secondary-blue);
     animation: animate 4s ease-in-out infinite;
-} */
+}
 
 @keyframes animate {
 	0%,
@@ -433,6 +528,7 @@ footer nav {
 		);
 	}
 }
+
 
 /* -------Mobile------ */
 

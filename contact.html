@@ -9,19 +9,19 @@
       <link rel="shortcut icon" 
         href="./assets/img/favicon.png" 
             type="image/x-icon">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">            <link href="https://fonts.cdnfonts.com/css/xeroda?styles=163202" rel="stylesheet">
-      <link rel="stylesheet" href="./assets/style/contact.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">            <link href="https://fonts.cdnfonts.com/css/xeroda?styles=163202" rel="stylesheet">
+            <link rel="stylesheet" href="./assets/style/index.css">
       <script src="https://kit.fontawesome.com/20608a4ccb.js" crossorigin="anonymous"></script>
-      <title>GritH20</title>
+      <title>Contact us | GRITH20</title>
   </head>
   <body>
-    <header>
+    <header class="not-index">
         <div class="container flex header">
             <div>
-              <a class="main-logo" href="./index.html">
-                <img src="./assets/img/logo-main.png" alt="main-logo"/>
+              <a href="./index.html">
+                <img src="./assets/img/logo-main.png" class="main-logo" alt="main-logo"/>
               </a>
             </div>
             <nav class="nav-items">
@@ -34,8 +34,12 @@
         </div>
     </header>
     <main>
-     <div class="container flex contact-container">
-      <section>
+      <div class="page-title">
+        <h2>Contact us</h2>
+        <h2>Contact us</h2>
+        <hr>
+    </div>
+     <div class="flex">
       <form method="post" action="#" name="contact form">
         <p>
          <label>First Name</label>
@@ -73,15 +77,12 @@
          <input type="textarea" placeholder="Please type the purpose of your message here." required>
         </p>
         <p>
-         <input type="submit" value="Submit">
+         <input type="submit" class="primary-button" value="Submit">
         </p>
       </form>
-      </section>
-      <section>
       <div class="map">
         <img src="./assets/img/map.png">
       </div>
-      </section>
      </div>
      <section class="flex continue-link">
       <div class="circle-image"><img src="./assets/img/oldermandrinking.jpg"></div>
@@ -91,7 +92,7 @@
           Join the vibrant GritH20 community—a congregation of fitness enthusiasts, athletes, and 
           adventurers who share our zeal for excellence, sustainability, and ethical choices.
         </p>
-        <button>Learn More</button>
+        <input type="button" class="secondary-button" value="Learn More">
       </div>
      </section>
     </main>
