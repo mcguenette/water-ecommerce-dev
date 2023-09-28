@@ -250,13 +250,14 @@ div .map {
 }
 
 .circle-image {
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
 }
 
 .circle-image img {
     border-radius: 50%;
 }
+
 .circle-img {
     width: 30%;
 }
@@ -268,6 +269,7 @@ div .map {
 button {
     border-radius: 6px;
     color: #fff;
+    padding: 12px 20px;
     background-color: #0077b5;
 }
 
