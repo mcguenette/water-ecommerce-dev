@@ -240,7 +240,7 @@ input[type=submit] {
     margin: 10px 0;
 }
 
-input[type=submit]:focus {
+input[type=submit]:hover {
     border: 3px solid #fb4501;
 }
 
@@ -257,6 +257,13 @@ div .map {
 .circle-image img {
     border-radius: 50%;
 }
+.circle-img {
+    width: 30%;
+}
+
+.about-link {
+    width: 70%;
+}
 
 button {
     border-radius: 6px;
@@ -264,12 +271,66 @@ button {
     background-color: #0077b5;
 }
 
-button:focus {
+button:hover {
     border-radius: 6px;
+    padding: 12px 20px;
     color: #fff;
     background-color: #fb4501;
 }
 
 .continue-link {
     background-color: #122346;
+}
+
+footer {
+    background-color: var(--section-bg-color);
+    position: relative;
+    display: flex;
+    height: 60px;
+    margin-top: 100px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer nav {
+    width: 50%;
+}
+
+.copyright {
+    justify-content: flex-end;
+    width: 50%;
+    font-size: 14px;
+}
+
+.copyright p {
+    text-align: right;
+    color: #fff;
+}
+
+.social-icons a {
+    background-color: rgb(255 255 255 / 20%);
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.linkedin:hover {
+    color:var(--linkedin-color);
+}
+
+.tiktok:hover {
+    color:var(--tiktok-color);
+}
+
+.git-hub:hover {
+    color:var(--github-color);
+}
+
+.social-icons i {
+    border-radius: 50%;
+    padding: 7px;
 }
