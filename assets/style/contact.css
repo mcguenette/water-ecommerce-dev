@@ -49,7 +49,158 @@ body {
 html, body {
     height: 100%;
 }
+.header {
+    height: 120px;
+}
 
+header {
+    background-color: transparent;
+    overflow: hidden;
+
+}
+
+header nav {
+    width: 60%;
+    text-align: right;
+}
+
+h1 {
+    font-size: 65px;
+    color: var(--body-font-color);
+    letter-spacing: 10px;
+    line-height: 80px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    font-family: 'Xeroda', sans-serif;
+    text-transform: uppercase;
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    letter-spacing: 1.5px;
+    line-height: 30px;
+}
+
+.inner-header h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+}
+
+.main-logo {
+    width: 50%;
+}
+
+nav ul {
+    font-size: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li + li {
+    padding-left: 25px;
+}
+
+.nav-items a, footer a, .primary-button, .secondary-button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.20s ease-in-out;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 19px;
+}
+
+.nav-items a {
+    color: #fff;
+}
+
+.nav-items a:hover {
+    color:var(--primary-red);
+}
+
+li.mobile-menu {
+    font-size: 14px;
+}
+
+.hero {
+    position:relative;
+    text-align:center;
+    background: linear-gradient(60deg, var(--primary-blue) 9%, var(--secondary-blue) 100%);
+    color:white;
+    height: 100%;
+    width: 100%;
+}
+
+.logo {
+    width:50px;
+    fill:white;
+    padding-right:15px;
+    display:inline-block;
+    vertical-align: middle;
+}
+  
+.inner-header {
+    height:35vh;
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+.inner-header.flex {
+    flex-direction: column;
+    height: 65vh;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+.waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; 
+    min-height:100px;
+    max-height:150px;
+}
+
+.hero-banner {
+    position: relative;
+}
+
+.hero-banner > * {
+    z-index: 10;
+    position: relative;
+}
+
+.content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+    background-color: white;
+}
+
+.flex .form {
+    width: 50%;
+}
+
+.flex .map {
+    width: 50%;
+}
 input[type=text]{
     width: 100%;
     padding: 12px 20px;
@@ -77,7 +228,7 @@ input[type=textarea]:focus {
     border: 3px solid #fb4501;
 }
 
-submit {
+input[type=submit] {
     border-radius: 6px;
     background-color: #0077b5;
     color: #fff;
@@ -86,7 +237,7 @@ submit {
     margin: 10px 0;
 }
 
-.map {
+div .map {
     width: 100%;
     height: 250px;
 }
