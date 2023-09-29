@@ -493,13 +493,9 @@ section.flex.continue-link {
     border-radius: 10px;
     margin-inline: auto;
     height: 350px;
-}
-
-.continue-link {
     align-items: center;
     text-align: left;
     gap: 40px;
-    margin: 0;
 }
 
 /* -------Footer------ */
