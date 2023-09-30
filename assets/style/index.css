@@ -80,7 +80,12 @@ h2 {
 
 h1, h2 {
     font-family: 'Xeroda', sans-serif;
-    text-transform: uppercase;
+}
+
+h2 span {
+    color: #fff;
+    font-size: 48px;
+    display: block;
 }
 
 h3 {
@@ -94,7 +99,6 @@ h3 {
 p {
     letter-spacing: 0.2px;
     line-height: 30px;
-    font-size: 20px;
     font-family: 'Poppins', sans-serif;
     text-align: left;
 }
@@ -204,28 +208,6 @@ li.mobile-menu {
     background-color: white;
 }
 
-.flex .form {
-    width: 50%;
-    text-align: left;
-}
-
-.contact-form {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-}
-
-form {
-    width: 450px;
-}
-
-.contact-us-container {
-    padding: 40px;
-    /* background-color: var(--section-bg-color); */
-    border-radius: 5px;
-}
 /* -------Search------- */
 
 input.search {
@@ -261,7 +243,6 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     opacity: .3;
     pointer-events: all;
 }
-
 
 /* -------Waves animation------ */
 
@@ -315,7 +296,6 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 
 section {
     margin-top: 100px;
-    height: 100%;
     width: 100%;
 }
 
@@ -330,8 +310,12 @@ section {
     width: 50%;
 }
 
-.section-one h2, .section-two h2 {
+.section-one h2 {
     color: var(--primary-red);
+}
+
+.section-two h2 {
+    color: #fff;
 }
 
 .section-two {
@@ -339,6 +323,8 @@ section {
     flex-wrap: wrap;
     gap: 20px;
     background-color: var(--primary-bg-color);
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .section-one.three-quarters {
@@ -369,15 +355,17 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: var(--secondary-bg-color);
+    padding: 20px 0px;
 }
 
 .column img {
     margin-top: 25px;
     width: 70%;
     padding: 20px;
-    /* border: 1px solid;
-    background-color: #ffffff1f; */
     border-radius: 10px;
+    border: 1px solid;
+    background-color: #ffffff2b;
 }
 
 .index-img {
@@ -567,16 +555,12 @@ input[type=textarea] {
     font-family: 'Xeroda', sans-serif;
 }
 
-
-
 /* ------Contact us------ */
 
 .circle-image {
     width: 200px;
 }
-section.flex.continue-link {
-    margin-top: 0px;
-}
+
 .about-link {
     width: 70%;
 }
@@ -590,6 +574,44 @@ section.flex.continue-link {
     align-items: center;
     text-align: left;
     gap: 40px;
+}
+
+.flex .form {
+    width: 50%;
+    text-align: left;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+form {
+    width: 450px;
+    z-index: 10;
+}
+
+.contact-us-container {
+    padding: 40px;
+    /* background-color: var(--section-bg-color); */
+    border-radius: 5px;
+}
+
+form::before {
+    content: "";
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    width: 600px;
+    height: 600px;
+    background: var(--primary-bg-color) url(../img/water-splash-two.png);
+    opacity: .1;
+    background-position: 50%;
+    background-size: cover;
+    z-index: -1;
 }
 
 /* -------Footer------ */
@@ -666,58 +688,6 @@ header.not-index {
     color: #fff;
 	font-size: 4em;
 }
-
-/* .page-title h2 {
-	color: #fff;
-	font-size: 4em;
-	position: absolute;
-	transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    font-family: 'Poppins', sans-serif;
-}
-
-.page-title h2:nth-child(1) {
-    -webkit-text-stroke: 2px;
-    color: #fff;
-}
-
-.page-title h2:nth-child(2) {
-    color: var(--secondary-blue);
-    animation: animate 4s ease-in-out infinite;
-}
-
-@keyframes animate {
-	0%,
-	100% {
-		clip-path: polygon(
-			0% 45%,
-			16% 44%,
-			33% 50%,
-			54% 60%,
-			70% 61%,
-			84% 59%,
-			100% 52%,
-			100% 100%,
-			0% 100%
-		);
-	}
-
-	50% {
-		clip-path: polygon(
-			0% 60%,
-			15% 65%,
-			34% 66%,
-			51% 62%,
-			67% 50%,
-			84% 45%,
-			100% 46%,
-			100% 100%,
-			0% 100%
-		);
-	}
-} */
-
 
 /* -------Mobile------ */
 
