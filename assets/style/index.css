@@ -402,6 +402,16 @@ input.secondary-button:hover {
     border: 1px solid var(--secondary-bg-color);
 }
 
+.secondary-button-buy {
+    border: 1px solid #fff;
+    background-color: #ffffff1f;
+}
+
+input.secondary-button-buy:hover {
+    background-color: var(--secondary-bg-color);
+    border: 1px solid var(--primary-red);
+}
+
 label {
     margin-top: 20px;
     display: inline-block;
@@ -449,6 +459,11 @@ input[type=textarea] {
     border-bottom: 1px solid #fff;
     border-radius: 0px;
     background-color: transparent;
+}
+
+.column h3 {
+    font-family: 'Xeroda', sans-serif;
+    font-size: 50px;
 }
 
 /* input[type=textarea]:focus {
