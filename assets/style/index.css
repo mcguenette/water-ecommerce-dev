@@ -347,6 +347,12 @@ section {
     margin-top: 60px;
 }
 
+.founders.three-quarters {
+    width: 80%;
+    margin-inline: auto;
+    margin-top: 60px;
+}
+
 hr {
     margin: 0 auto;
     width: 100%;
@@ -451,6 +457,7 @@ input[type=textarea] {
 
 /* ------About us-------- */
 
+
 .tall-image {
     width: 50%;
     border-radius: 6px;
@@ -459,7 +466,7 @@ input[type=textarea] {
 .description {
     width: 50%;
     background-color: var(--section-bg-color);
-    padding: 19px;
+    padding: 20px 19px;
     border-radius: 6px;
 }
 
@@ -471,6 +478,78 @@ input[type=textarea] {
     font-size: 16px;
     font-weight: 400;
 
+}
+
+.founders {
+    margin-bottom: 150px;
+}
+
+.founders .flex {
+    gap: 15px;
+}
+
+.founders h2{
+    font-weight: 500;
+    margin-left: 50px;
+    margin-bottom: 25px;
+}
+
+.hydrogen {
+    width: 50%;
+    background-color: #122346;
+    border-radius: 6px;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.oxygen {
+    width: 50%;
+    background-color: #122346;
+    border-radius: 6px;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.H-pic {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.O-pic {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.H-description p {
+    font-size: 13px;
+    margin-top: 13px;
+}
+
+/* .H-description h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+} */
+
+.O-description p {
+    font-size: 13px;
+    margin-top: 13px;
+}
+
+/* .O-description h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+} */
+
+.founders h3 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Xeroda', sans-serif;
 }
 
 
