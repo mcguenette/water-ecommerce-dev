@@ -4,10 +4,11 @@
 /* -------Basic-styles------ */
 
 :root {
-    --primary-bg-color: #0f1a31;
-    --secondary-bg-color: #1d2333;
-    --body-font-color: #fff;
-    --section-bg-color: rgb(41 60 146 / 30%);
+    --primary-bg-color: rgb(240, 245, 253);
+    --secondary-bg-color: #fff;
+    --primary-font-color: #0f1a31;
+    --secondary-font-color: #fff;
+    --secondary-button-color: #1d2333;
     --card-bg-color: #ccc;
     --primary-blue: #293c92;
     --secondary-blue: #5c9cfd;
@@ -43,7 +44,7 @@ main {
 body {
     background-color: var(--primary-bg-color);
     font-family: 'Poppins', sans-serif;
-    color:var(--body-font-color);
+    color:var(--primary-font-color);
 }
 
 html, body {
@@ -69,13 +70,13 @@ header nav {
 
 h1 {
     font-size: 65px;
-    color: var(--body-font-color);
+    color: var(--secondary-font-color);
     letter-spacing: 10px;
     line-height: 80px;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 38px;
 }
 
 h1, h2 {
@@ -84,8 +85,14 @@ h1, h2 {
 
 h2 span {
     color: #fff;
-    font-size: 48px;
+    font-size: 40px;
     display: block;
+    border: 1px solid;
+    background-color: #ffffff2b;
+    width: 70px;
+    margin-inline: auto;
+    border-radius: 50%;
+    padding: 2px;
 }
 
 h3 {
@@ -101,6 +108,7 @@ p {
     line-height: 30px;
     font-family: 'Poppins', sans-serif;
     text-align: left;
+    font-size: 18px;
 }
 
 .inner-header h2 {
@@ -289,31 +297,38 @@ input[type="search"]:focus::-webkit-search-cancel-button {
     gap: 25px;
     justify-content: center;
     align-items: center;
-    /* background-color: var(--section-bg-color); */
     padding: 30px;
     border-radius: 10px;
 }
 
 section {
-    margin-top: 100px;
     width: 100%;
 }
 
 .section-img {
     display: flex;
     justify-content: center;
-    align-items: self-end;
-    margin-top: 50px;
-    margin-left: 30px;
+    align-items: center;
+    gap: 50px;
+}
+
+.section-one.brand-message {
+    width: 50%;
 }
 
 .section-one {
-    width: 60%;
-    
+    padding: 40px 50px;
+    border-radius: 6px;
+    background-color: var(--secondary-font-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
 }
 
 .section-one h2 {
     color: var(--primary-red);
+}
+
+.section-img, .section-two {
+    margin-top: 120px;
 }
 
 .section-two h2 {
@@ -322,11 +337,13 @@ section {
 
 .section-two {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     background-color: var(--primary-bg-color);
     text-align: center;
     text-transform: capitalize;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .section-one.three-quarters {
@@ -349,16 +366,33 @@ hr {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--secondary-blue) , rgba(255, 255, 255, 0));
 }
 
+.section-two.row {
+    padding: 20px 0px;
+}
+
 .column {
-    flex: 0 1 auto;
-    width: calc(25% - 15px);
-    border-radius: 10px;
+    -webkit-box-align: center;
     align-items: center;
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: var(--secondary-bg-color);
-    padding: 20px 0px;
+    min-height: 300px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    position: relative;
+    width: calc(25% - 15px);
+}
+
+.column-title {
+    color: rgb(56, 56, 56);
+    padding: 12px 0px;
+    text-align: center;
+    width: 100%;
+    font-weight: 900;
+    font-size: 18px;
+    background: linear-gradient(60deg, rgb(62 92 230) 9%, rgb(110 167 255) 100%);
 }
 
 .column img {
@@ -366,20 +400,26 @@ hr {
     width: 70%;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid;
-    background-color: #ffffff2b;
+    background-color: #5c9cfd1a;
 }
 
 .index-img {
     width: 400px;
     height: 300px;
+    border-radius: 10px;
 }
 
 /* -------Buttons------ */
 
 .primary-button {
     border: 1px solid var(--primary-red);
-    background-color:#fb45019e;
+    background-color: var(--primary-red);
+}
+
+input.primary-button:hover, input.primary-button.invert:hover {
+    background-color: var(--secondary-blue);
+    border-color: var(--secondary-blue);
+    color: var(--secondary-bg-color);
 }
 
 .secondary-button {
@@ -388,8 +428,8 @@ hr {
 }
 
 input.secondary-button:hover {
-    background-color: var(--secondary-bg-color);
-    border: 1px solid var(--secondary-bg-color);
+    background-color: var(--secondary-button-color);
+    border: 1px solid var(--secondary-button-color);
 }
 
 .secondary-button-buy {
@@ -400,6 +440,11 @@ input.secondary-button:hover {
 input.secondary-button-buy:hover {
     background-color: var(--secondary-bg-color);
     border: 1px solid var(--primary-red);
+}
+
+input.primary-button.invert {
+    background-color: transparent;
+    color: var(--primary-red);
 }
 
 label {
@@ -415,68 +460,35 @@ input[type=button], input[type=submit] {
     line-height: 24px;
 }
 
-input.primary-button:hover {
-    background-color: var(--primary-red);
-}
-
-input[type=text] {
-    width: 100%;
-    padding: 7px 5px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    border-bottom: 1px solid #fff;
-    border-radius: 0px;
-    background-color: transparent;
-}
-
-input[type=text]::placeholder, 
-input[type=textarea]::placeholder {
-    color: #ffffffba;
-}
-
-input[type=text], 
-input[type=textarea] {
-    color: #fff;
-}
-
-/* input[type=text]:focus {
-    border: 1px solid #fb4501;
-} */
-
-input[type=textarea] {
-    width: 100%;
-    padding: 7px 5px;
-    border-bottom: 1px solid #fff;
-    border-radius: 0px;
-    background-color: transparent;
-}
 
 .column h3 {
     font-family: 'Xeroda', sans-serif;
     font-size: 50px;
 }
 
-/* input[type=textarea]:focus {
-    border: 1px solid #fb4501;
-} */
-
 /* ------About us-------- */
 
-
 .tall-image {
-    width: 50%;
-    border-radius: 6px;
+    width: 500px;
 }
 
-.description {
-    width: 50%;
-    background-color: var(--section-bg-color);
-    padding: 20px 19px;
-    border-radius: 6px;
+.tall-image img {
+    border-radius: 20px;
 }
 
-.description p {
-    font-size: 13px;
+.section-one .description {
+    display: flex;
+    flex-direction: column;
+}
+
+.three-quarters.flex {
+    gap: 40px;
+    flex-direction: column;
+}
+
+.three-quarters.container {
+    margin-top: 100px;
+    padding: 40px;
 }
 
 .description h3 {
@@ -500,63 +512,60 @@ input[type=textarea] {
     margin-bottom: 15px;
 }
 
-.hydrogen {
-    width: 50%;
-    background-color: #122346;
-    border-radius: 6px;
-    margin-top: 15px;
-    padding: 20px;
-}
-
-.oxygen {
-    width: 50%;
-    background-color: #122346;
-    border-radius: 6px;
-    margin-top: 15px;
-    padding: 20px;
-}
-
-.H-pic {
+.hydrogen-img, .oxygen-img {
     height: 200px;
     width: 200px;
     border-radius: 10px;
-    align-self: center;
+    margin-inline: auto;
 }
 
-.O-pic {
-    height: 200px;
-    width: 200px;
-    border-radius: 10px;
-    align-self: center;
+.hydrogen-desc, .oxygen-desc {
+    margin-top: 30px;
 }
-
-.H-description p {
-    font-size: 13px;
-    margin-top: 13px;
-    margin-bottom: 30px;
-}
-
-/* .H-description h3 {
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 20px;
-} */
-
-.O-description p {
-    font-size: 13px;
-    margin-top: 13px;
-}
-
-/* .O-description h3 {
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 20px;
-} */
 
 .founders h3 {
     font-size: 30px;
     font-weight: 600;
     font-family: 'Xeroda', sans-serif;
+}
+
+.about-link {
+    width: 70%;
+}
+
+.about-link p {
+    margin: 15px 0px;
+    text-align: center;
+}
+
+section.flex.continue-link.container.reach-out {
+    background: var(--secondary-bg-color);
+    width: 40%;
+}
+
+.section-one.about-us {
+    background: var(--secondary-bg-color) url(../img/water-splash-two.png);
+    background-size: cover;
+}
+.about-link h2, .about-link a {
+    text-align: center;
+    margin-inline: auto;
+    display: block;
+}
+
+section.section-two.about-us {
+    margin-top: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+.hydrogen, .oxygen {
+    width: 50%;
+    background-color: var(--secondary-bg-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
+    border-radius: 6px;
+    margin-top: 15px;
+    padding: 20px;
 }
 
 /* ------Contact us------ */
@@ -565,13 +574,13 @@ input[type=textarea] {
     width: 200px;
 }
 
-.about-link {
-    width: 70%;
+.circle-image img {
+    border-radius: 10px;
 }
 
 .continue-link {
-    background-color: #122346;
-    width: 75%;
+    color: var(--primary-font-color);
+    width: 60%;
     border-radius: 10px;
     margin-inline: auto;
     height: 350px;
@@ -594,34 +603,65 @@ input[type=textarea] {
 }
 
 form {
-    width: 450px;
+    width: 500px;
     z-index: 10;
+    background-color: var(--secondary-bg-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.map img {
+    border-radius: 20px;
 }
 
 .contact-us-container {
-    padding: 40px;
-    /* background-color: var(--section-bg-color); */
     border-radius: 5px;
+    margin-bottom: 100px;
 }
 
-form::before {
-    content: "";
-    position: absolute;
-    left: 15%;
-    top: 50%;
-    width: 600px;
-    height: 600px;
-    background: var(--primary-bg-color) url(../img/water-splash-two.png);
-    opacity: .1;
-    background-position: 50%;
-    background-size: cover;
-    z-index: -1;
+input[type=text] {
+    width: 100%;
+    padding: 7px 5px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--primary-font-color);
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+input[type=text]::placeholder, 
+input[type=textarea]::placeholder {
+    color: var(--primary-font-color);
+}
+
+input[type=text], 
+input[type=textarea] {
+    color: var(--primary-font-color);
+}
+
+input[type=textarea] {
+    width: 100%;
+    padding: 7px 5px;
+    border-bottom: 1px solid var(--primary-font-color);
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+section.contact-us-container.three-quarters.container {
+    margin-top: 100px;
+}
+
+section.flex.continue-link.container {
+    background: var(--secondary-bg-color) url(../img/overlay-water-splash.png);
+    margin-bottom: 150px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
 }
 
 /* -------Footer------ */
 
 footer {
-    background-color: var(--section-bg-color);
+    background-color: var(--primary-font-color);
     position: relative;
     display: flex;
     height: 60px;
