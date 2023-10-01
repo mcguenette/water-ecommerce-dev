@@ -334,7 +334,7 @@ section {
 }
 
 .founders.three-quarters {
-    width: 80%;
+    width: 75%;
     margin-inline: auto;
     margin-top: 60px;
 }
@@ -484,7 +484,8 @@ input[type=textarea] {
 }
 
 .founders {
-    margin-bottom: 150px;
+    margin-top: 20px;
+    margin-bottom: 100px;
 }
 
 .founders .flex {
@@ -494,7 +495,7 @@ input[type=textarea] {
 .founders h2{
     font-weight: 500;
     margin-left: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .hydrogen {
@@ -530,6 +531,7 @@ input[type=textarea] {
 .H-description p {
     font-size: 13px;
     margin-top: 13px;
+    margin-bottom: 30px;
 }
 
 /* .H-description h3 {
