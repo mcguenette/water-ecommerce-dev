@@ -304,10 +304,12 @@ section {
     justify-content: center;
     align-items: self-end;
     margin-top: 50px;
+    margin-left: 30px;
 }
 
 .section-one {
-    width: 50%;
+    width: 60%;
+    
 }
 
 .section-one h2 {
@@ -369,8 +371,8 @@ hr {
 }
 
 .index-img {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
 }
 
 /* -------Buttons------ */
