@@ -76,7 +76,7 @@ h1 {
 }
 
 h2 {
-    font-size: 38px;
+    font-size: 46px;
 }
 
 h1, h2 {
@@ -112,8 +112,9 @@ p {
 }
 
 .inner-header h2 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    font-size: 34px;
+    font-family: 'Poppins';
 }
 
 .main-logo {
@@ -125,7 +126,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
 }
 
 nav ul li + li {
@@ -151,10 +152,6 @@ nav.nav-items {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-
-.nav-item {
-    width: 40%;
 }
 
 li.mobile-menu {
@@ -294,22 +291,19 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 /* -------Sections------ */
 .section-one, .section-two {
     display: flex;
-    gap: 25px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     padding: 30px;
     border-radius: 10px;
 }
 
-section {
-    width: 100%;
-}
-
 .section-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .section-one.brand-message {
@@ -317,7 +311,7 @@ section {
 }
 
 .section-one {
-    padding: 40px 50px;
+    padding: 40px 40px;
     border-radius: 6px;
     background-color: var(--secondary-font-color);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
@@ -333,17 +327,6 @@ section {
 
 .section-two h2 {
     color: #fff;
-}
-
-.section-two {
-    display: flex;
-    gap: 20px;
-    background-color: var(--primary-bg-color);
-    text-align: center;
-    text-transform: capitalize;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: stretch;
 }
 
 .section-one.three-quarters {
@@ -370,6 +353,17 @@ hr {
     padding: 20px 0px;
 }
 
+/* Container for flexboxes */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create four equal columns */
+.column {
+    flex: calc(25% - 15px);
+}
+  
 .column {
     -webkit-box-align: center;
     align-items: center;
@@ -378,21 +372,19 @@ hr {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
     display: flex;
     flex-direction: column;
-    min-height: 300px;
     overflow: hidden;
     padding-bottom: 20px;
     position: relative;
-    width: calc(25% - 15px);
 }
 
 .column-title {
     color: rgb(56, 56, 56);
     padding: 12px 0px;
     text-align: center;
-    width: 100%;
     font-weight: 900;
     font-size: 18px;
     background: linear-gradient(60deg, rgb(62 92 230) 9%, rgb(110 167 255) 100%);
+    width: 100%;
 }
 
 .column img {
@@ -401,6 +393,12 @@ hr {
     padding: 20px;
     border-radius: 10px;
     background-color: #5c9cfd1a;
+}
+
+.column p {
+    text-align: center;
+    padding: 10px;
+    height: 75px;
 }
 
 .index-img {
@@ -491,30 +489,14 @@ input[type=button], input[type=submit] {
     padding: 40px;
 }
 
-.description h3 {
-    font-size: 16px;
-    font-weight: 400;
-
-}
-
-.founders {
-    margin-top: 20px;
-    margin-bottom: 100px;
-}
-
-.founders .flex {
-    gap: 15px;
-}
-
-.founders h2{
-    font-weight: 500;
-    margin-left: 50px;
-    margin-bottom: 15px;
+.hydrogen-img img, .oxygen-img img {
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
 }
 
 .hydrogen-img, .oxygen-img {
-    height: 200px;
-    width: 200px;
+    height: 175px;
+    width: 150px;
     border-radius: 10px;
     margin-inline: auto;
 }
@@ -539,8 +521,9 @@ input[type=button], input[type=submit] {
 }
 
 section.flex.continue-link.container.reach-out {
-    background: var(--secondary-bg-color);
+    background: var(--primary-font-color);
     width: 40%;
+    color: var(--secondary-font-color);
 }
 
 .section-one.about-us {
@@ -557,6 +540,7 @@ section.section-two.about-us {
     margin-top: 0;
     padding: 0;
     gap: 40px;
+    align-items: stretch;
 }
 
 .hydrogen, .oxygen {
@@ -690,11 +674,12 @@ footer nav {
     font-size: 18px;
 }
 
+.copyright span {
+    color: var(--primary-red);
+}
+
 .social-icons a {
-    background-color: rgb(255 255 255 / 20%);
-    color: #fff;
-    border-radius: 50%;
-    border: 1px solid #fff;
+    color: var(--secondary-font-color);
 }
 
 .linkedin:hover {
@@ -735,16 +720,60 @@ header.not-index {
 
 /* -------Mobile------ */
 
+/* Desktop Lrg: 1200px and down */
+@media (max-width: 1200px) {
+    .section-one h2, .section-two h2, .inner-header h2 {
+        font-size: 30px;
+    }
+    .column p {
+        font-size: 14px;
+    }
+}
+
+/* Desktop medium: 992px and down */
+@media (max-width: 992px) {
+    .nav-item input.search {
+        display: none;
+    }
+    .section-one h2, .section-two h2, .inner-header h2 {
+        font-size: 30px;
+    }
+    .column p, .section-one p {
+        font-size: 14px;
+    }
+    .column h3 {
+        font-size: 42px;
+    }
+    .section-one.brand-message {
+        width: 100%;
+    }
+}
+
+/* tablet: 768px and down */
+@media (max-width: 768px) {
+    .section-one h2, .section-two h2, .inner-header h2 {
+        font-size: 24px;
+    }
+}
+
+/* small: 480px and down */
+@media (max-width: 768px) {
+    .main-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 768px) {
     .waves {
-      height:40px;
-      min-height:40px;
+      height: 40px;
+      min-height: 40px;
     }
     .content {
-      height:30vh;
+      height: 30vh;
     }
     h1 {
-      font-size:24px;
+      font-size: 42px;
     }
 }
 
@@ -758,6 +787,7 @@ header.not-index {
     }
 }
 
+/* small: 480px and up */
 @media (min-width: 768px) {
     .mobile-menu {
         display: none;
@@ -765,20 +795,16 @@ header.not-index {
     }
 }
 
-@media (max-width: 768px) {
-    .column , .section-one {
-        width: 100%;
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 992px) {
+    .column {
+      flex: calc(50% - 15px);
     }
-}
-
-@media (max-width: 768px) {
-    .column, .section-one {
-        width: calc(50% - 10px);
+  }
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column;
     }
-}
-
-@media (max-width: 480px) {
-    .column, .section-one {
-        width: 100%;
-    }
-}
+  }
