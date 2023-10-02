@@ -864,6 +864,14 @@ header.not-index {
         align-items: center;
     }
 
+    .box h2 {
+        font-size: 40px;
+    }
+
+    .box p {
+        font-size: 15px;
+    } 
+
     .box .primary-button {
         margin-bottom: 15px;
     }
@@ -887,6 +895,13 @@ header.not-index {
     .box img {
         display: none
     }
+    .section-three {
+    width: 100%; 
+    padding: 0;       
+   }
+   .box div {
+    width: 75%;
+   }
 }
 
 /* small: 480px and down */
@@ -895,6 +910,7 @@ header.not-index {
         display: flex;
         flex-direction: column;
     }
+
 }
 
 @media (max-width: 768px) {
