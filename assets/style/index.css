@@ -695,6 +695,11 @@ form h2 {
 .contact-links a {
     text-decoration: none;
     color: var(--primary-font-color);
+    transition: all 0.20s ease-in-out;
+}
+
+.contact-links a:hover {
+    color: var(--primary-orange);
 }
 
 input[type=text] {
