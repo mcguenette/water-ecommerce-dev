@@ -585,19 +585,38 @@ section.section-two.about-us {
 .contact-form {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
     gap: 40px;
 }
 
 form {
-    width: 100%;
+    width: 60%;
     z-index: 10;
-    max-width: 500px;
     background-color: var(--secondary-bg-color);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
     padding: 30px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+form h2 {
+    text-align: left;
+    color: var(--primary-font-color);
+}
+
+.map-section {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.map {
+    display: contents;
 }
 
 .map img {
@@ -607,6 +626,21 @@ form {
 .contact-us-container {
     border-radius: 5px;
     margin-bottom: 100px;
+}
+
+.contact-links {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.contact-links span {
+    font-weight: 600;
+}
+
+.contact-links p {
+    line-height: 35px;
 }
 
 input[type=text] {
@@ -645,7 +679,7 @@ section.contact-us-container.three-quarters.container {
     background: linear-gradient(rgb(255 255 255 / 50%), rgb(255 255 255 / 80%)),  url(../img/overlay-water-splash.png);
     margin-bottom: 150px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
-    width: calc(100% - 30px);
+    width: 100%;
     height: 350px;
     flex-wrap: nowrap;
 }
@@ -715,6 +749,7 @@ footer nav {
 
 .fa-solid {
     font-size: 24px;
+    color: var(--secondary-font-color);
 }
 
 /* --------Hover header animation---------- */
@@ -766,7 +801,7 @@ header.not-index {
     }
     .section-one.brand-message, 
     section.flex.continue-link.container.reach-out, 
-    section.flex.continue-link.container {
+    section.flex.continue-link.container,  .map-section, form {
         width: calc(100% - 20px);
     }
     .circle-image {
@@ -782,7 +817,8 @@ header.not-index {
     }
     .section-one.brand-message, 
     section.flex.continue-link.container.reach-out, 
-    section.flex.continue-link.container {
+    section.flex.continue-link.container,
+    .map-section, form {
         width: calc(100% - 20px);
     }
 }
@@ -835,7 +871,7 @@ header.not-index {
         flex: calc(50% - 20px);
         flex-direction: column;
     }
-    .hydrogen, .oxygen {
+    .hydrogen, .oxygen, .map-section, form {
         width: 100%;
     }
   }
