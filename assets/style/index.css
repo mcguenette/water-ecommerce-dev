@@ -71,7 +71,7 @@ header nav {
 h1 {
     font-size: 65px;
     color: var(--secondary-font-color);
-    letter-spacing: 10px;
+    letter-spacing: 7px;
     line-height: 80px;
 }
 
@@ -526,9 +526,10 @@ section.flex.continue-link.container.reach-out {
 }
 
 .section-one.about-us {
-    background: var(--secondary-bg-color) url(../img/water-splash-two.png);
+    background: linear-gradient(rgb(255 255 255 / 50%), rgb(255 255 255 / 80%)), url(../img/water-splash-two.png);
     background-size: cover;
 }
+
 .about-link h2, .about-link a {
     text-align: center;
     margin-inline: auto;
@@ -590,8 +591,9 @@ section.section-two.about-us {
 }
 
 form {
-    width: 500px;
+    width: 100%;
     z-index: 10;
+    max-width: 500px;
     background-color: var(--secondary-bg-color);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
     padding: 30px;
@@ -640,7 +642,7 @@ section.contact-us-container.three-quarters.container {
 }
 
 .continue-link.learn-more {
-    background: var(--secondary-bg-color) url(../img/overlay-water-splash.png);
+    background: linear-gradient(rgb(255 255 255 / 50%), rgb(255 255 255 / 80%)),  url(../img/overlay-water-splash.png);
     margin-bottom: 150px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
     width: calc(100% - 30px);
@@ -709,6 +711,10 @@ footer nav {
 .social-icons i {
     border-radius: 50%;
     padding: 7px;
+}
+
+.fa-solid {
+    font-size: 24px;
 }
 
 /* --------Hover header animation---------- */
