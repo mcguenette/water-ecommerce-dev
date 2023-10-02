@@ -209,7 +209,6 @@ li.mobile-menu {
     position:relative;
     height:20vh;
     text-align:center;
-    background-color: white;
 }
 
 main .page-title {
@@ -340,8 +339,6 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 .section-one {
     padding: 40px 40px;
     border-radius: 6px;
-    background-color: var(--secondary-font-color);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
 }
 
 .section-one h2 {
@@ -443,9 +440,6 @@ hr {
     width: 100%;
     height: 200px;
     align-items: center;
-    background: rgb(255, 255, 255);
-    border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
     display: flex;
     overflow: hidden;
     padding: 20px;
@@ -478,7 +472,7 @@ input.primary-button:hover, input.primary-button.invert:hover {
 
 .secondary-button {
     border: 1px solid #fff;
-    background-color: #ffffff1f;
+    background-color: transparent;
 }
 
 input.secondary-button:hover {
@@ -575,7 +569,7 @@ section.flex.continue-link.container.reach-out {
 }
 
 .section-one.about-us {
-    background: linear-gradient(rgb(255 255 255 / 50%), rgb(255 255 255 / 80%)), url(../img/water-splash-two.png);
+    background: linear-gradient(rgb(240 245 253 / 34%), rgb(240 245 253 / 86%)), url(../img/water-splash-two.png);
     background-size: cover;
 }
 
@@ -594,9 +588,6 @@ section.section-two.about-us {
 
 .hydrogen, .oxygen {
     width: 50%;
-    background-color: var(--secondary-bg-color);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
-    border-radius: 6px;
     margin-top: 15px;
     padding: 20px;
 }
@@ -678,9 +669,6 @@ form h2 {
 }
 
 .contact-links {
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
-    border-radius: 10px;
     padding: 30px;
 }
 
