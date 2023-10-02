@@ -874,8 +874,9 @@ header.not-index {
     .map-section, form {
         width: calc(100% - 20px);
     }
-    .box p {
-        display: none;
+
+    .box img {
+        display: none
     }
 }
 
