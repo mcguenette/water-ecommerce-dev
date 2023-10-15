@@ -27,9 +27,10 @@ instead using github desktop would be a great alternative. We were able to work 
 requests to complete our work.
 
 ## Here are some examples of code
-This is my favorite part of the website! The animation of waves was made with HTML and CSS only.
+1. This is my favorite part of the website! The animation of waves was made with HTML and CSS only.
 It's using an SVG with a `<g>` group element and several `<use>` elements referencing parts of the SVG by their IDs using the 
 `xlink:href` attribute`. The effect is using a repeated pattern to create the illusion of a wave effect.
+### Below shows the HTML of the waves effect
 ```
 <div class="waves-container">
     <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -46,6 +47,50 @@ It's using an SVG with a `<g>` group element and several `<use>` elements refere
     </svg>
 </div>
 ```
+### Here is the front-end preview on mobile:
+![](https://github.com/mcguenette/water_demo_site/blob/main/2023-10-15%2018-45-27.gif)
+
+2. I did research to look for subscription products and on one of the websites I stumbled upon I really liked the way they used a container
+and divided the top section where the title was and added a gradient. It was a unique style that I thought would fit our vibe! I went ahead
+and created a reponsive design that I hope would make it inticing to purchase.
+### Below shows the HTML and CSS for the 1 Month Subscription product _(the HTML is similar for all 4 products, simply content is changed)_
+#### HTML:
+```
+<div class="column column-one">
+  <div class="column-title"><h2><span>1</span> Month Subscription</h2></div>
+  <img src="./assets/img/1-month.png">
+  <h3>$30.<sup>00</sup></h3>
+  <p> Get <span>1 case</span> once a month</p>
+  <input type="button" class="primary-button" value="Add to cart">
+</div>
+```
+#### CSS:
+```
+.column {
+    -webkit-box-align: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 20px;
+    position: relative;
+}
+.column-title {
+    color: rgb(56, 56, 56);
+    padding: 12px 0px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    background: linear-gradient(60deg, rgb(62 92 230) 9%, rgb(110 167 255) 100%);
+    width: 100%;
+}
+```
+
+### Here is the front-end preview on desktop:
+![](https://github.com/mcguenette/water_demo_site/blob/main/subs_products.png)
 
 
 
