@@ -11,7 +11,6 @@ All of this was made for a _fake_ company that we invented, I say we because my 
   - Select colour palette, logos and fonts.
 - Consider light mode or dark mode
 - What products to sell
-- Who the founders are
 - Utilize chat gpt for content
 
 ## Challenges
@@ -30,6 +29,7 @@ requests to complete our work.
 1. This is my favorite part of the website! The animation of waves was made with HTML and CSS only.
 It's using an SVG with a `<g>` group element and several `<use>` elements referencing parts of the SVG by their IDs using the 
 `xlink:href` attribute`. The effect is using a repeated pattern to create the illusion of a wave effect.
+
 ### Below shows the HTML of the waves effect
 ```
 <div class="waves-container">
@@ -51,9 +51,11 @@ It's using an SVG with a `<g>` group element and several `<use>` elements refere
 ![](https://github.com/mcguenette/water_demo_site/blob/main/2023-10-15%2018-45-27.gif)
 
 2. I did research to look for subscription products and on one of the websites I stumbled upon I really liked the way they used a container
-and divided the top section where the title was and added a gradient. It was a unique style that I thought would fit our vibe! I went ahead
+and divided the top section where the title was and added a `linear-gradient`. It was a unique style that I thought would fit our vibe! I went ahead
 and created a reponsive design that I hope would make it inticing to purchase.
+
 ### Below shows the HTML and CSS for the 1 Month Subscription product _(the HTML is similar for all 4 products, simply content is changed)_
+
 #### HTML:
 ```
 <div class="column column-one">
@@ -92,7 +94,41 @@ and created a reponsive design that I hope would make it inticing to purchase.
 ### Here is the front-end preview on desktop:
 ![](https://github.com/mcguenette/water_demo_site/blob/main/subs_products.png)
 
+3. The last one I'd like to show is our contact form on the contact us page. Using Flexbox `display: flex;` and `@media` queries to achieve
+the look and feel of this form. I also used favicons  and a plain image that we used for a map. The next step would be to add a real map
+through Google Maps API's.
 
+### Below shows the flexbox and favicons used:
+```
+.flex .form {
+    width: 50%;
+    text-align: left;
+}
+.contact-form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    text-align: center;
+    gap: 40px;
+}
+```
+```
+<div class="contact-links">
+  <p><i class="fa-solid fa-envelope"></i><a href="mailto:support@grith20.com"> support@grith20.com</a></p>
+  <p><i class="fa-solid fa-phone"></i><a tel="204-123-4567"> 204-123-4567</a></p>
+  <p><i class="fa-solid fa-location-dot"></i> 123 3rd St East, Winnipeg MB, R0A0X0 </p>
+</div>
+```
 
+### Here is the front-end preview on desktop:
+![](https://github.com/mcguenette/water_demo_site/blob/main/contact_us_img.png)
 
+---
+
+## Conclusion
+It was really fun creating a webpage and in the future we would love to add javascript functionality and maybe even convert this into a react
+webpage. However for now, we will leave it at this and will come back another time after we've learned even more :) 
+
+Thank you!
+- MC
 
